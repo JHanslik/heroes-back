@@ -35,8 +35,19 @@ const verifyHeroes = (req, res, next) => {
         res.status(404).json("Hero not found ");
     }
 };
+
+const validateHero = (req, res, next) => {
+    const { slug, name, power, color, isAlive, age, image } = req.body;
+
+    if (!slug || !name || !power || !color || !isAlive || !age || !image) {
+        res.status(406).json("Incorrect properties");
+    } else {
+        next();
+    }
+};
 module.exports = {
     verifyAddHeroes: verifyAddHeroes,
     verifyPowers: verifyPowers,
     verifyHeroes: verifyHeroes,
+    validateHero: validateHero,
 };

@@ -6,7 +6,7 @@
         "color": "red",
         "isAlive": true,
         "age": 46,
-        "image": "https://blog.fr.playstation.com/tachyon/sites/10/2019/07/unnamed-file-18.jpg?resize=1088,500&crop_strategy=smart"
+        "image": "https://images-na.ssl-images-amazon.com/images/I/91LnR9CEYQL.jpg"
     },
     {
         "slug": "thor",
@@ -24,6 +24,6 @@
         "color": "red",
         "isAlive": false,
         "age": 30,
-        "image": "https://aws.vdkimg.com/film/2/5/1/1/251170_backdrop_scale_1280xauto.jpg"
+        "image": "https://cdn1.originalcomics.fr/31262/daredevil-tome-5-vf.jpg"
     }
 ]

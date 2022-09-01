@@ -5,6 +5,7 @@ const {
     verifyAddHeroes,
     verifyPowers,
     verifyHeroes,
+    validateHero,
 } = require("../middlewares/heroes");
 
 app.get("/", (req, res) => {
@@ -21,7 +22,7 @@ app.get("/:slug/powers", (req, res) => {
     res.json(hero.power);
 });
 
-app.post("/", verifyAddHeroes, (req, res) => {
+app.post("/", verifyAddHeroes, validateHero, (req, res) => {
     const hero = {
         slug: req.body.slug,
         name: req.body.name,
@@ -42,7 +43,7 @@ app.put("/:slug/powers", verifyPowers, (req, res) => {
     res.status(201).json(newPower);
 });
 
-app.put("/:slug", verifyHeroes, (req, res) => {
+app.put("/:slug", verifyHeroes, validateHero, (req, res) => {
     const heroIndex = heroes.findIndex((hero) => hero.slug === req.params.slug);
     const editedHero = req.body;
     heroes[heroIndex] = editedHero;
