@@ -10,7 +10,7 @@ app.use(cors(process.env.FRONTEND_URL));
 app.use(express.json());
 app.use(morgan("tiny"));
 
-app.use("/heroes", heroesRoutes);
+app.use("/", heroesRoutes);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server running on ${process.env.PORT}`);
